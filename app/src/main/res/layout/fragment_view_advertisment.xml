@@ -1,0 +1,73 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewAdvertismentFragment"
+    android:background="@color/fragment_view_advert_background">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  >
+        <!-- vieW pager should be full bleed -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/ad_image_viewpager"
+            android:background="#dddddd">
+
+        </android.support.v4.view.ViewPager>
+        <TextView
+            android:id="@+id/ad_image_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="24dp"
+            android:padding="12dp"
+            android:background="#bb000000"
+            android:textColor="#ffffff"
+            android:text="*/*"/>
+        </RelativeLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/ad_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"/>
+            <TextView
+                android:id="@+id/ad_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="£ cheap!"/>
+            <TextView
+                android:id="@+id/ad_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01/01/2000"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ad_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No User"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/ad_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gumtree.test.sentinelweb.uk.co.gumtreetest" >
-
+    package="co.uk.sentinelweb.gumtree.test" >
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".GumtreeApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".ViewAdversimentActivity"
+            android:name=".ViewAdvertismentActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".AdvertDataProvider"
+            android:authorities="co.uk.sentinelweb.gumtree.test.provider.advert_data"
+            android:enabled="true"
+            android:exported="true" >
+        </provider>
     </application>
 
 </manifest>
