@@ -1,15 +1,17 @@
-package co.uk.sentinelweb.gumtree.test;
+package co.uk.sentinelweb.gumtree.test.fragment;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import co.uk.sentinelweb.gumtree.test.GumtreeApplication;
+import co.uk.sentinelweb.gumtree.test.R;
+import co.uk.sentinelweb.gumtree.test.activity.ViewAdvertismentActivity;
 
 /**
  * A placeholder fragment containing a simple view.

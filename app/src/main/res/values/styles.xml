@@ -1,7 +1,67 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowActionBar">false</item>
+    <style name="Gumtree.ActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/Gumtree.ActionBarTitleText</item>
+        <item name="android:titleTextStyle">@style/Gumtree.ActionBarTitleText</item>
+        <item name="android:textColor">#ffffffff</item>
     </style>
 
+    <style name="Gumtree.ActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/actionbar_text</item>
+    </style>
+
+    <!-- Viewing adverts -->
+    <style name="ViewAd"></style>
+
+    <style name="ViewAd.FAB">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="ViewAd.FABMain" parent="ViewAd.FAB">
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="ViewAd.FABMinor" parent="ViewAd.FAB">
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+
+    </style>
+    <!-- Text customisation -->
+    <style name="ViewAd.TextView">
+        <item name="android:textColor">@color/viewad_text</item>
+        <item name="android:textSize">@dimen/text_default_size</item>
+    </style>
+    <style name="ViewAd.TextView.Description" parent="ViewAd.TextView">
+        <item name="android:textSize">@dimen/text_reading_size</item>
+        <item name="fontPath">fonts/RobotoSlab-Light.ttf</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+    <style name="ViewAd.TextView.Label" parent="ViewAd.TextView">
+        <item name="android:textSize">@dimen/text_item_size</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <item name="android:textColor">@color/viewad_text_label</item>
+    </style>
+    <style name="ViewAd.TextView.LabelRow" parent="ViewAd.TextView">
+        <item name="android:textSize">@dimen/text_item_size</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <item name="android:textColor">@color/viewad_text_label</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/item_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/item_vertical_margin</item>
+    </style>
+    <style name="ViewAd.TextView.Data" parent="ViewAd.TextView">
+        <item name="android:textSize">@dimen/text_item_size</item>
+    </style>
+    <style name="ViewAd.TextView.Row">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/item_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/item_vertical_margin</item>
+    </style>
 </resources>

@@ -2,13 +2,24 @@ package co.uk.sentinelweb.gumtree.test;
 
 import android.app.Application;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
 /**
  * Created by robert on 03/03/2015.
  */
 public class GumtreeApplication extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                        .setDefaultFontPath("fonts/Roboto-Light.ttf")
+                        .setFontAttrId(R.attr.fontPath)
+                        .build()
+        );
+    }
 
     /**
-     * Gets the title string to use in actionBar
+     * Gets the title string to use in actionBar.
      * @param pos
      * @return
      */
@@ -27,5 +38,4 @@ public class GumtreeApplication extends Application {
         }
         return getString(R.string.app_name);
     }
-
 }

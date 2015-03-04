@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="actionbar_background" >#95c858</color>
+    <color name="actionbar_text" >#ffffff</color>
+    <color name="viewad_text">#000000</color>
+    <color name="viewad_text_label">#888888</color>
+
     <color name="fragment_view_advert_background" >#ffffff</color>
+    <color name="ad_fab_primary">#1565C0</color>
+    <color name="ad_fab_primary_pressed">#90CAF9</color>
+    <color name="ad_fab_ripple">#1E88E5</color>
 </resources>

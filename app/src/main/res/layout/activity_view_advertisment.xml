@@ -5,20 +5,12 @@
     tools:context=".ViewAdversimentActivity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/actionbar_background"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        android:elevation="4dp">
-    </android.support.v7.widget.Toolbar>
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        >
+
+        ><!-- android:layout_below="@+id/toolbar" -->
         <!-- As the main content view, the view below consumes the entire
              space available using match_parent in both dimensions. -->
         <FrameLayout
@@ -40,8 +32,24 @@
                   android:layout_width="@dimen/navigation_drawer_width"
                   android:layout_height="match_parent"
                   android:layout_gravity="start"
-                  android:name="co.uk.sentinelweb.gumtree.test.NavigationDrawerFragment"
+                  android:name="co.uk.sentinelweb.gumtree.test.fragment.NavigationDrawerFragment"
                   tools:layout="@layout/fragment_navigation_drawer"/>
 
     </android.support.v4.widget.DrawerLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_black_to_tsp"
+        android:theme="@style/Gumtree.ActionBar"
+        android:textColor="@color/actionbar_text"
+        android:elevation="4dp">
+        <!--
+        android:theme="@style/Gumtree.ActionBar"
+        android:textColor="@color/actionbar_text"
+        android:background="@color/actionbar_background"
+        -->
+    </android.support.v7.widget.Toolbar>
+
+
 </RelativeLayout>

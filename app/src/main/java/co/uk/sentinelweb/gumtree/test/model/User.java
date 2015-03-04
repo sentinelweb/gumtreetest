@@ -10,6 +10,7 @@ public class User {
     private String mName;
     private String mEmail;
     private String mPhone;
+    private String mImageUrl;
 
     public Long getId() {
         return mId;
@@ -49,5 +50,13 @@ public class User {
 
     public void setPhone(String phone) {
         mPhone = phone;
+    }
+
+    public String getImageUrl() {
+        return mImageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        mImageUrl = imageUrl;
     }
 }

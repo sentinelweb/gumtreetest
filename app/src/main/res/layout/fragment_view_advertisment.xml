@@ -1,73 +1,206 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ViewAdvertismentFragment"
-    android:background="@color/fragment_view_advert_background">
+    android:layout_height="match_parent">
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  >
-        <!-- vieW pager should be full bleed -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <android.support.v4.view.ViewPager
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:id="@+id/ad_image_viewpager"
-            android:background="#dddddd">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewAdvertismentFragment"
+        android:background="@color/fragment_view_advert_background"
+        android:id="@+id/ad_scroll_outer">
 
-        </android.support.v4.view.ViewPager>
-        <TextView
-            android:id="@+id/ad_image_counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="24dp"
-            android:padding="12dp"
-            android:background="#bb000000"
-            android:textColor="#ffffff"
-            android:text="*/*"/>
-        </RelativeLayout>
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:id="@+id/ad_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Title"/>
-            <TextView
-                android:id="@+id/ad_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="£ cheap!"/>
-            <TextView
-                android:id="@+id/ad_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="01/01/2000"/>
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      >
+            <!-- vieW pager should be full bleed -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/ad_user"
+                <android.support.v4.view.ViewPager
                     android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:id="@+id/ad_image_viewpager"
+                    android:background="#dddddd">
+
+                </android.support.v4.view.ViewPager>
+                <TextView
+                    android:id="@+id/ad_image_counter"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No User"/>
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:padding="12dp"
+                    android:background="#bb000000"
+                    android:textColor="#ffffff"
+                    android:text="*/*"/>
+
             </RelativeLayout>
-            <TextView
-                android:id="@+id/ad_description"
+            <!-- this textview wont take padding for some reason :( Wrapping it with a frame layout for now.  -->
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description"/>
+                android:id="@+id/ad_label_ctnr">
+                <TextView
+                    android:id="@+id/ad_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/item_header_padding"
+                    android:textSize="@dimen/text_header_size"
+                    android:text="No Title"
+                    fontPath="fonts/Roboto-Regular.ttf"/>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="#eeeeee"
+                    >
+                    <ImageView
+                        android:id="@+id/ad_user_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:id="@+id/ad_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ad_user_img"
+                        android:text="No User"
+                        style="@style/ViewAd.TextView"
+                        fontPath="fonts/Roboto-Regular.ttf"/>
+                    <TextView
+                        android:id="@+id/ad_user_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ad_user_img"
+                        android:layout_below="@+id/ad_user"
+                        android:text="No Phone"
+                        style="@style/ViewAd.TextView"/>
+                    <TextView
+                        android:id="@+id/ad_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ad_user_img"
+                        android:layout_below="@+id/ad_user_phone"
+                        android:text="No Email"
+                        style="@style/ViewAd.TextView"/>
+                </RelativeLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ViewAd.TextView.Row">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/viewad_label_dateposted"
+                        style="@style/ViewAd.TextView.Label"
+                        />
+                    <TextView
+                        android:id="@+id/ad_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Date"
+                        style="@style/ViewAd.TextView.Data"
+                        android:layout_gravity="right"
+                        />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ViewAd.TextView.Row">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        style="@style/ViewAd.TextView.Label"
+                        />
+                    <TextView
+                        android:id="@+id/ad_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Place"
+                        style="@style/ViewAd.TextView.Data"
+                        android:layout_gravity="right"
+                        />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/viewad_label_description"
+                    style="@style/ViewAd.TextView.LabelRow"/>
+                <TextView
+                    android:id="@+id/ad_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No Description"
+                    style="@style/ViewAd.TextView.Description"
+                    android:layout_marginBottom="80dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+    <TextView
+        android:id="@+id/ad_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="No Price"
+        style="@style/ViewAd.TextView"
+        android:background="#88000000"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginTop="50dp"
+        fontPath="fonts/Roboto-Medium.ttf"
+        />
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/ad_email_button"
+        android:layout_above="@+id/ad_text_button"
+        android:src="@drawable/ic_action_email"
+        style="@style/ViewAd.FABMinor"
+        fab:fab_colorNormal="@color/ad_fab_primary"
+        fab:fab_colorPressed="@color/ad_fab_primary_pressed"
+        fab:fab_colorRipple="@color/ad_fab_ripple"
+        fab:fab_type="mini"
+        android:visibility="gone"/>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/ad_text_button"
+        android:layout_above="@+id/ad_phone_button"
+        style="@style/ViewAd.FABMinor"
+        android:src="@drawable/ic_action_chat"
+        fab:fab_colorNormal="@color/ad_fab_primary"
+        fab:fab_colorPressed="@color/ad_fab_primary_pressed"
+        fab:fab_colorRipple="@color/ad_fab_ripple"
+        fab:fab_type="mini"
+        android:visibility="gone"/>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/ad_phone_button"
+        android:layout_above="@+id/ad_contact_button"
+        style="@style/ViewAd.FABMinor"
+        android:src="@drawable/ic_action_call"
+        fab:fab_colorNormal="@color/ad_fab_primary"
+        fab:fab_colorPressed="@color/ad_fab_primary_pressed"
+        fab:fab_colorRipple="@color/ad_fab_ripple"
+        fab:fab_type="mini"
+        android:visibility="gone"/>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/ad_contact_button"
+        style="@style/ViewAd.FABMain"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_action_person"
+        fab:fab_colorNormal="@color/ad_fab_primary"
+        fab:fab_colorPressed="@color/ad_fab_primary_pressed"
+        fab:fab_colorRipple="@color/ad_fab_ripple"
+        />
+
+</RelativeLayout>

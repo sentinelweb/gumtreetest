@@ -10,14 +10,41 @@ import java.util.Date;
  * Skipping jdoc to save time
  */
 public class Advert {
+    public class PhotoData {
+        String mUrl;
+        int mHighlightColor = -1;
+
+        public PhotoData(String url) {
+            mUrl = url;
+        }
+
+        public String getUrl() {
+            return mUrl;
+        }
+
+        public void setUrl(String url) {
+            mUrl = url;
+        }
+
+        public int getHighlightColor() {
+            return mHighlightColor;
+        }
+
+        public void setHighlightColor(int highlightColor) {
+            mHighlightColor = highlightColor;
+        }
+    }
     private Long mId;
     private String mTitle;
     private String mDescription;
     private Date mDatePosted;
-    private ArrayList<String> mPhotos = new ArrayList<String>();
+    private ArrayList<PhotoData> mPhotos = new ArrayList<PhotoData>();
     private Float mPrice;
     private User mUser;
     private Location mLocation;
+    private String mPlace;
+    private String mUrl;
+
     public User getUser() {
         return mUser;
     }
@@ -50,11 +77,11 @@ public class Advert {
         mDescription = description;
     }
 
-    public ArrayList<String> getPhotos() {
+    public ArrayList<PhotoData> getPhotos() {
         return mPhotos;
     }
 
-    public void setPhotos(ArrayList<String> photos) {
+    public void setPhotos(ArrayList<PhotoData> photos) {
         mPhotos = photos;
     }
 
@@ -80,5 +107,21 @@ public class Advert {
 
     public void setLocation(Location location) {
         mLocation = location;
+    }
+
+    public String getPlace() {
+        return mPlace;
+    }
+
+    public void setPlace(String place) {
+        mPlace = place;
+    }
+
+    public String getUrl() {
+        return mUrl;
+    }
+
+    public void setUrl(String url) {
+        mUrl = url;
     }
 }
