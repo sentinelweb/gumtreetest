@@ -157,7 +157,9 @@ public class AdvertDataProvider extends ContentProvider {
         // TODO: Implement this to handle requests to update one or more rows.
         throw new UnsupportedOperationException("Not yet implemented");
     }
+
     ///////////////////////////// MOCK DATA //////////////////////////////////////
+    // some lorem ipsum ...
     private static final String MOCK_DESCRIPTION = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat enim nulla, at dignissim augue venenatis sit amet. Nulla a lorem vel nisl dignissim ultricies at vulputate mi. Nulla nec nibh id diam aliquet dapibus. Pellentesque nisi libero, gravida nec lacus ac, laoreet rutrum mi. Vivamus ullamcorper purus ut sagittis pretium. Curabitur blandit felis ut diam viverra, nec luctus nibh vestibulum. Donec ut tortor sit amet elit eleifend rhoncus. Fusce laoreet vehicula tempus.\n" +
             "\n" +
             "Mauris eu erat consectetur, ornare arcu at, finibus lacus. Phasellus egestas sem lectus, eget vestibulum nunc commodo eget. Etiam vitae massa in purus commodo imperdiet. Proin diam tortor, condimentum ut erat id, mollis ultrices eros. Nam eget turpis euismod sapien lacinia ultricies vel commodo sapien. Sed non interdum sapien. Curabitur ultricies purus a metus fermentum dapibus vel a enim. Donec at mi interdum, pulvinar metus at, pretium lacus. Donec ac faucibus orci, scelerisque pretium felis. Donec aliquet risus ac dui tempus consequat. Maecenas accumsan libero eu lectus efficitur, sagittis egestas arcu tempor. Mauris eleifend placerat vulputate. Vivamus molestie ipsum ac auctor tincidunt. Suspendisse tristique imperdiet tincidunt. Vestibulum lectus nisl, tincidunt et elit in, tincidunt vulputate metus. Duis fermentum tortor ut sapien feugiat malesuada.\n" +

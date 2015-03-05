@@ -52,7 +52,7 @@ import co.uk.sentinelweb.gumtree.test.model.Advert;
 import co.uk.sentinelweb.gumtree.test.util.SendIntent;
 
 /**
- * A placeholder fragment containing a simple view.
+ * View an advert fragment.
  */
 public class ViewAdvertismentFragment extends Fragment {
 
