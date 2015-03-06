@@ -43,12 +43,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import co.uk.sentinelweb.gumtree.test.images.CircleTransform;
-import co.uk.sentinelweb.gumtree.test.model.User;
+import co.uk.sentinelweb.gumtree.lib.model.User;
 import co.uk.sentinelweb.gumtree.test.provider.ProviderAccessor;
 import co.uk.sentinelweb.gumtree.test.R;
 import co.uk.sentinelweb.gumtree.test.activity.ViewAdvertismentActivity;
 import co.uk.sentinelweb.gumtree.test.images.PalletteTransformation;
-import co.uk.sentinelweb.gumtree.test.model.Advert;
+import co.uk.sentinelweb.gumtree.lib.model.Advert;
 import co.uk.sentinelweb.gumtree.test.util.SendIntent;
 
 /**
@@ -66,7 +66,7 @@ public class ViewAdvertismentFragment extends Fragment {
     //// Data fields
     /** The ad id */
     long mAdvertId = -1;
-    /** Model object {@link co.uk.sentinelweb.gumtree.test.model.Advert}*/
+    /** Model object {@link co.uk.sentinelweb.gumtree.lib.model.Advert}*/
     Advert mAdvert=null;
     /**
     /** current HighlightColor */

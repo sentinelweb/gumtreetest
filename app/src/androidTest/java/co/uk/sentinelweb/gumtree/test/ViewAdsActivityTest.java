@@ -13,6 +13,10 @@ import android.util.Log;
 
 import com.melnykov.fab.FloatingActionButton;
 
+/**
+ * @author robert
+ * Tests for the {@link ViewAdvertismentActivity} activity.
+ */
 public class ViewAdsActivityTest extends ActivityInstrumentationTestCase2<ViewAdvertismentActivity> {
     ViewAdvertismentActivity mViewAdsActivity = null;
     public ViewAdsActivityTest() {
@@ -23,6 +27,10 @@ public class ViewAdsActivityTest extends ActivityInstrumentationTestCase2<ViewAd
         mViewAdsActivity = getActivity();
 	}
 
+    /**
+     * Tests the toolbar is ready and has been found.
+     * We can make other tests e.g. to check menu items, etc are present here.
+     */
 	public void testToolbar() {
         Toolbar toolbar = mViewAdsActivity.getToolbar();
         assertNotNull(toolbar);
@@ -30,6 +38,12 @@ public class ViewAdsActivityTest extends ActivityInstrumentationTestCase2<ViewAd
 
     Boolean result = null;
 
+    /**
+     * Test for the image viewpager
+     *
+     * the view test have to be run frim the UI thread on the device hence we have to wait in
+     * the testing thread whiles these tests run and assert the result that comes back
+     */
     public void testImagePager() {
         final ViewPager vp = (ViewPager)mViewAdsActivity.findViewById(R.id.ad_image_viewpager);
         result = null;
@@ -57,6 +71,9 @@ public class ViewAdsActivityTest extends ActivityInstrumentationTestCase2<ViewAd
         assertTrue(result);
     }
 
+    /**
+     * Tests the button press on the phone button
+     */
     public void testPhoneButton() {
         final FloatingActionButton phoneButton = (FloatingActionButton) mViewAdsActivity.findViewById(R.id.ad_phone_button);
 
@@ -67,6 +84,9 @@ public class ViewAdsActivityTest extends ActivityInstrumentationTestCase2<ViewAd
         });
     }
 
+    /**
+     * Tests the button press on the email button
+     */
     public void testEmailButton() {
         Toolbar toolbar = mViewAdsActivity.getToolbar();
         assertNotNull(toolbar);

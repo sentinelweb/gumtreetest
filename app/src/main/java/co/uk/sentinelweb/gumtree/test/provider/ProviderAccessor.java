@@ -6,14 +6,12 @@ import android.location.Location;
 import android.net.Uri;
 import android.util.Log;
 
-import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import co.uk.sentinelweb.gumtree.test.Statics;
-import co.uk.sentinelweb.gumtree.test.model.Advert;
-import co.uk.sentinelweb.gumtree.test.model.User;
-import co.uk.sentinelweb.gumtree.test.provider.AdvertDataProvider;
+import co.uk.sentinelweb.gumtree.lib.model.Advert;
+import co.uk.sentinelweb.gumtree.lib.model.User;
 
 /**
  * Created by robert on 03/03/2015.
@@ -58,9 +56,9 @@ public class ProviderAccessor {
                 // get the location
                 long latitude = cursor.getLong(cursor.getColumnIndex(AdvertDataProvider.Q_AD_LAT));
                 long longitude = cursor.getLong(cursor.getColumnIndex(AdvertDataProvider.Q_AD_LONG));
-                Location whereIsIt = new Location("");
-                whereIsIt.setLatitude(latitude);
-                whereIsIt.setLongitude(longitude);
+                Advert.ItemLocation whereIsIt = advert.new ItemLocation();
+                whereIsIt.setLat(latitude);
+                whereIsIt.setLon(longitude);
                 advert.setLocation(whereIsIt);
                 userId = cursor.getLong(cursor.getColumnIndex(AdvertDataProvider.Q_AD_USER_ID));
             } finally {

@@ -1,6 +1,5 @@
-package co.uk.sentinelweb.gumtree.test.model;
+package co.uk.sentinelweb.gumtree.lib.model;
 
-import android.location.Location;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,6 +9,41 @@ import java.util.Date;
  * Skipping jdoc to save time
  */
 public class Advert {
+    /**
+     * Item Location (since we cant use Android android.location.Location as this is a plain java lib).
+     */
+    public class ItemLocation {
+        private double mLat;
+        private double mLon;
+
+        public double getLat() {
+            return mLat;
+        }
+
+        public void setLat(double lat) {
+            this.mLat = lat;
+        }
+
+        public double getLon() {
+            return mLon;
+        }
+
+        public void setLon(double lon) {
+            this.mLon = lon;
+        }
+        /**
+         * gets a geo: URL for use in launch maps intent;
+         * @return geo:latitude,longitude or n
+         *
+         */
+        public String getGeoUrl(){
+            return new StringBuilder().append("geo:").append(mLocation.getLat()).append(",").append(mLocation.getLon()).toString();
+        }
+    }
+
+    /**
+     * Photo data (URL and color attributes)
+     */
     public class PhotoData {
         String mUrl;
         int mHighlightColor = -1;
@@ -41,7 +75,7 @@ public class Advert {
     private ArrayList<PhotoData> mPhotos = new ArrayList<PhotoData>();
     private Float mPrice;
     private User mUser;
-    private Location mLocation;
+    private ItemLocation mLocation;
     private String mPlace;
     private String mUrl;
 
@@ -101,11 +135,11 @@ public class Advert {
         mDatePosted = datePosted;
     }
 
-    public Location getLocation() {
+    public ItemLocation getLocation() {
         return mLocation;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(ItemLocation location) {
         mLocation = location;
     }
 
@@ -124,4 +158,6 @@ public class Advert {
     public void setUrl(String url) {
         mUrl = url;
     }
+
+
 }
