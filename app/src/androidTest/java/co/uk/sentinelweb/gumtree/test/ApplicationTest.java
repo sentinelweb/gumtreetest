@@ -2,9 +2,10 @@ package co.uk.sentinelweb.gumtree.test;
 
 import android.test.ApplicationTestCase;
 
+import co.uk.sentinelweb.gumtree.app.GumtreeApplication;
 import co.uk.sentinelweb.gumtree.lib.model.Advert;
 import co.uk.sentinelweb.gumtree.lib.model.User;
-import co.uk.sentinelweb.gumtree.test.provider.ProviderAccessor;
+import co.uk.sentinelweb.gumtree.app.provider.ProviderAccessor;
 
 /**
  * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>

@@ -1,15 +1,11 @@
 package co.uk.sentinelweb.gumtree.test;
 
-import co.uk.sentinelweb.gumtree.test.activity.ViewAdvertismentActivity;
+import co.uk.sentinelweb.gumtree.R;
+import co.uk.sentinelweb.gumtree.app.activity.ViewAdvertismentActivity;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.ContextWrapper;
-import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.test.ActivityInstrumentationTestCase2;
-import android.util.Log;
 
 import com.melnykov.fab.FloatingActionButton;
 
@@ -88,8 +84,6 @@ public class ViewAdsActivityTest extends ActivityInstrumentationTestCase2<ViewAd
      * Tests the button press on the email button
      */
     public void testEmailButton() {
-        Toolbar toolbar = mViewAdsActivity.getToolbar();
-        assertNotNull(toolbar);
         final FloatingActionButton emailButton = (FloatingActionButton) mViewAdsActivity.findViewById(R.id.ad_email_button);
 
         mViewAdsActivity.runOnUiThread(new Runnable() {
