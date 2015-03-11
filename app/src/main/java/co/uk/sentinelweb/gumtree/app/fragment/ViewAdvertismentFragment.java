@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test.fragment;
+package co.uk.sentinelweb.gumtree.app.fragment;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -42,14 +42,14 @@ import com.squareup.picasso.Picasso;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import co.uk.sentinelweb.gumtree.test.images.CircleTransform;
+import co.uk.sentinelweb.gumtree.app.images.CircleTransform;
 import co.uk.sentinelweb.gumtree.lib.model.User;
-import co.uk.sentinelweb.gumtree.test.provider.ProviderAccessor;
-import co.uk.sentinelweb.gumtree.test.R;
-import co.uk.sentinelweb.gumtree.test.activity.ViewAdvertismentActivity;
-import co.uk.sentinelweb.gumtree.test.images.PalletteTransformation;
+import co.uk.sentinelweb.gumtree.app.provider.ProviderAccessor;
+import co.uk.sentinelweb.gumtree.R;
+import co.uk.sentinelweb.gumtree.app.activity.ViewAdvertismentActivity;
+import co.uk.sentinelweb.gumtree.app.images.PalletteTransformation;
 import co.uk.sentinelweb.gumtree.lib.model.Advert;
-import co.uk.sentinelweb.gumtree.test.util.SendIntent;
+import co.uk.sentinelweb.gumtree.app.util.SendIntent;
 
 /**
  * View an advert fragment.

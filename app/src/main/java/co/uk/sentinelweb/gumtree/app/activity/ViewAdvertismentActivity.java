@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test.activity;
+package co.uk.sentinelweb.gumtree.app.activity;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -11,10 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 
-import co.uk.sentinelweb.gumtree.test.R;
-import co.uk.sentinelweb.gumtree.test.fragment.NavigationDrawerFragment;
-import co.uk.sentinelweb.gumtree.test.fragment.PlaceHolderFragment;
-import co.uk.sentinelweb.gumtree.test.fragment.ViewAdvertismentFragment;
+import co.uk.sentinelweb.gumtree.R;
+import co.uk.sentinelweb.gumtree.app.fragment.NavigationDrawerFragment;
+import co.uk.sentinelweb.gumtree.app.fragment.PlaceHolderFragment;
+import co.uk.sentinelweb.gumtree.app.fragment.ViewAdvertismentFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
@@ -38,6 +38,8 @@ public class ViewAdvertismentActivity extends ActionBarActivity
 
     /** Default section index for the advert fragment */
     public static final int AD_FRAGMENT_INDEX = 3;
+
+    /** Default advert id */
     public static final int DEFAULT_ADVERT_ID = 1;
 
     /** Fragment managing the behaviors, interactions and presentation of the navigation drawer. */
@@ -57,6 +59,7 @@ public class ViewAdvertismentActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
     }
 
     /**

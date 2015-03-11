@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test.provider;
+package co.uk.sentinelweb.gumtree.app.provider;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -11,7 +11,7 @@ import android.util.Log;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import co.uk.sentinelweb.gumtree.test.Statics;
+import co.uk.sentinelweb.gumtree.app.Statics;
 
 /**
  * Provider for the advert data
@@ -19,7 +19,7 @@ import co.uk.sentinelweb.gumtree.test.Statics;
  */
 public class AdvertDataProvider extends ContentProvider {
     /** Content provider authority string */
-    public static final String CONTENT_AUTHORITY="co.uk.sentinelweb.gumtree.test.provider.advert_data";
+    public static final String CONTENT_AUTHORITY="co.uk.sentinelweb.gumtree.provider.advert_data";
     /** Query ad data path */
     public static final String PATH_ADVERT_DATA = "advert_data";
     /** Query ad photos path */
@@ -54,8 +54,6 @@ public class AdvertDataProvider extends ContentProvider {
     public static final String Q_USER_PHONE = "phone";
     public static final String Q_USER_EMAIL = "email";
     public static final String Q_USER_IMG = "image";
-
-
 
     public AdvertDataProvider() {
     }

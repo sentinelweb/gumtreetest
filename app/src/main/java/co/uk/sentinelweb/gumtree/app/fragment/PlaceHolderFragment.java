@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test.fragment;
+package co.uk.sentinelweb.gumtree.app.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import co.uk.sentinelweb.gumtree.test.GumtreeApplication;
-import co.uk.sentinelweb.gumtree.test.R;
-import co.uk.sentinelweb.gumtree.test.activity.ViewAdvertismentActivity;
+import co.uk.sentinelweb.gumtree.app.GumtreeApplication;
+import co.uk.sentinelweb.gumtree.R;
+import co.uk.sentinelweb.gumtree.app.activity.ViewAdvertismentActivity;
 
 /**
  * A placeholder fragment containing a simple view.

@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test.images;
+package co.uk.sentinelweb.gumtree.app.images;
 
 import android.graphics.Bitmap;
 import android.support.v7.graphics.Palette;

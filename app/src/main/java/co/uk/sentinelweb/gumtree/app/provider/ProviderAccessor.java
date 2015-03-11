@@ -1,15 +1,14 @@
-package co.uk.sentinelweb.gumtree.test.provider;
+package co.uk.sentinelweb.gumtree.app.provider;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.location.Location;
 import android.net.Uri;
 import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import co.uk.sentinelweb.gumtree.test.Statics;
+import co.uk.sentinelweb.gumtree.app.Statics;
 import co.uk.sentinelweb.gumtree.lib.model.Advert;
 import co.uk.sentinelweb.gumtree.lib.model.User;
 

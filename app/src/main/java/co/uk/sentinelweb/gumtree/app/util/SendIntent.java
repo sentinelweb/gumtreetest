@@ -1,9 +1,8 @@
-package co.uk.sentinelweb.gumtree.test.util;
+package co.uk.sentinelweb.gumtree.app.util;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.telephony.SmsManager;
 
 /**
  * Various launch intents.

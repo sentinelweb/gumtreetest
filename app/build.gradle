@@ -4,12 +4,15 @@ android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
+
     defaultConfig {
-        applicationId "co.uk.sentinelweb.gumtree.test"
+        applicationId "co.uk.sentinelweb.gumtree"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
     buildTypes {
@@ -18,7 +21,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // needed when using espresso?
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+
+    productFlavors {
+    }
+
 }
+// roboelectric tutorial here:
+//     http://www.bignerdranch.com/blog/all-in-together-android-studio-gradle-and-robolectric/
+//apply plugin: 'android-unit-test'
+//afterEvaluate {
+//    tasks.findByName("assembleDebug").dependsOn("testDebugClasses")
+//}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -28,4 +49,13 @@ dependencies {
     compile 'uk.co.chrisjenx:calligraphy:2.0.1'
     compile 'com.melnykov:floatingactionbutton:1.2.0'
     compile project(':gumtreelib')
+
+//    compile 'org.robolectric:robolectric:2.4'
+//
+//    testCompile 'org.robolectric:robolectric:2.4'
+//    testCompile 'junit:junit:4.+'
+    compile 'com.android.support:support-annotations:21.0.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+
 }

@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test.fragment;
+package co.uk.sentinelweb.gumtree.app.fragment;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
@@ -20,9 +20,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import co.uk.sentinelweb.gumtree.test.R;
+import co.uk.sentinelweb.gumtree.R;
 
 /**
  * @author robert
@@ -193,6 +192,10 @@ public class NavigationDrawerFragment extends Fragment {
         });
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        if (isDrawerOpen()) {
+            mDrawerLayout.closeDrawer(mFragmentContainerView);
+        }
     }
 
     private void selectItem(int position) {

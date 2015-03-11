@@ -1,7 +1,8 @@
-package co.uk.sentinelweb.gumtree.test;
+package co.uk.sentinelweb.gumtree.app;
 
 import android.app.Application;
 
+import co.uk.sentinelweb.gumtree.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**

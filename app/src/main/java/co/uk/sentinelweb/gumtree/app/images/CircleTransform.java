@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.uk.sentinelweb.gumtree.test.images;
+package co.uk.sentinelweb.gumtree.app.images;
  
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

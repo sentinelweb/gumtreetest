@@ -1,4 +1,4 @@
-package co.uk.sentinelweb.gumtree.test;
+package co.uk.sentinelweb.gumtree.app;
 
 /**
  * Created by robert on 03/03/2015.
